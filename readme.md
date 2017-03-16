@@ -163,7 +163,7 @@ ______________________________________
 
 After running the data analysis pipeline, we have have a VCF file that we can upload into ANNOVAR and VEP.  Annovar has consistently provided more reliable in my experience, so analysis begun there.  Of particular interest is that the exome summary results are narrowed down to only 9 single necleotide polymorphisms.  Furthermore, sorting by ExAC Frequency, and we see that 8 of the 9 SNPs are present in 13% or more of the population, with three of them being present in over half the human population.  However, one of them, rs45549044, is present in only 0.0043% of the population, which is very close the observed prevelance of 0.006% that the CDC recorded in the year 2000.  And while it's noted as being non-pathogenic, it is the only variant that warrents a COSMIC ID, which happens to be COSM1338810.
 
-![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar.png)  
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-rs45549044.png)  
 ______________________________________  
 #### Variant Effect Predictor  
 
@@ -174,6 +174,11 @@ rs35309576
 rs45549044  
 
 Furthermore, not only only did VEP also identify rs45549044 as having moderate impact, it's PolyPhen score was 0.934, indicating that it is a probably damaging varient.  
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-rs45549044.png)  
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-rs45549044.png)  
+
 
 ______________________________________  
 #### rs45549044  
@@ -189,7 +194,7 @@ Global MAF:T=0.0022/11
 HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.757366G>A, NM_206933.2:c.14074G>A, NP_996816.2:p.Gly4692Arg  
 ```
 
-![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1.png)  
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1-rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1-rs45549044.png)  
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png)   
 
