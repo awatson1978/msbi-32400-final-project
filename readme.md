@@ -17,7 +17,7 @@ mkdir src
 ______________________________________
 #### Assignment #1    
 
-Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ (Links to an external site.)C9E3k (Links to an external site.)) then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ (Links to an external site.)data.html (Links to an external site.)
+Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ 
 
 ______________________________________
 #### CDC Statistics on Autism Spectrum Disorder  
@@ -186,7 +186,7 @@ ______________________________________
 #### Autism Panel  
 
 
-~[AutismPanel](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png)    
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png)    
 
 ______________________________________  
 #### References   
