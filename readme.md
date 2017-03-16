@@ -1,7 +1,7 @@
 Abigail Watson  
 MSBI 32400 – Final Project  
 
-=======================================
+______________________________________
 #### Project Setup    
 
 ```bash
@@ -14,12 +14,12 @@ mkdir results
 mkdir src   
 ```
 
-=======================================
+______________________________________
 #### Assignment #1    
 
 Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ (Links to an external site.)C9E3k (Links to an external site.)) then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ (Links to an external site.)data.html (Links to an external site.)
 
-=======================================
+______________________________________
 #### CDC Statistics on Autism Spectrum Disorder  
 
 To understand the genetic factors contributing to Autism Spectrum Disorder, we first begin looking at phenotype expression, which we can obtain from the Centers of Disease Control.  The difficulty in doing so is that the CDC reports that the prevalence of Autism has been increasing over the past few decades.  In the Surveillance Year 2000, it was reported that 1 in 150 children who were born in 1992 were diagnosed with autism (0.006%); whereas in 2012, the numbers had increased to 1 in 68 children who were born in 2004 were diagnosed with autism (0.0147%).  This presents a few hypotheses:
@@ -31,7 +31,7 @@ B.  The reporitng process is including more autisitc children.
 
 We also note that parents who have a child with ASD have a 2%–18% chance of having a second child who is also affected, which suggests a recessive trait since it's a less than 1/4.  ASD tends to occur more often in people who have certain genetic or chromosomal conditions, indicating involvement in a gene network (to be expected for behavioral and psychiatric disorders).  Children born to older parents are at a higher risk for having ASD, indicating that ASD is a common symptom of mutations in the germ line.  ASD commonly co-occurs with other developmental, psychiatric, neurologic, chromosomal, and genetic diagnoses in 83% of the cases; again suggesting ASD is a common symptom of regulatory pathway disfunction.  
 
-=======================================  
+______________________________________  
 #### Tool Installation      
 Note:  These commands were run on a Mac, so there are some minor differences with wget/curl and compiled binaries.  
 
@@ -83,7 +83,7 @@ unzip snpEff_latest_core.zip
 mv snpEff ../bin 
 ```
 
-=======================================  
+______________________________________  
 #### Data Files        
 ```bash
 # Download Autism BAM File  
@@ -109,7 +109,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz.tbi
 mv ~/Downloads/clinvar.vcf.gz* msbi-32400-final-project/data 
 ```
 
-=======================================  
+______________________________________  
 #### Data Pipeline / Protocol        
 ```bash
 # Convert the raw Human Genome data (hg19.2bit) into a .fa file  
@@ -152,12 +152,12 @@ java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf.gz NA1289
 java -Xmx2G -jar ../bin/snpEff/SnpSift.jar extractFields -s ',' -e '.' NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.vcf CHROM POS REF ALT ID "ANN[*].ALLELE" "ANN[*].EFFECT" "ANN[*].IMPACT" "ANN[*].GENE" "ANN[*].FEATURE" "ANN[*].FEATUREID" "ANN[*].BIOTYPE" "ANN[*].RANK" "ANN[*].HGVS_C" "ANN[*].HGVS_P" CLNHGVS CLNALLE CLNACC CLNSIG CLNREVSTAT CLNDBN > NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.Extracted
 ```
 
-=======================================  
+______________________________________  
 #### ANNOVAR Analysis    
 
 After running the data analysis pipeline, we have have a VCF file that we can upload into ANNOVAR and VEP.  Annovar has consistently provided more reliable in my experience, so analysis begun there.  Of particular interest is that the exome summary results are narrowed down to only 9 single necleotide polymorphisms.  Furthermore, sorting by ExAC Frequency, and we see that 8 of the 9 SNPs are present in 13% or more of the population, with three of them being present in over half the human population.  However, one of them, rs45549044, is present in only 0.0043% of the population, which is very close the observed prevelance of 0.006% that the CDC recorded in the year 2000.  And while it's noted as being non-pathogenic, it is the only variant that warrents a COSMIC ID, which happens to be COSM1338810.
 
-=======================================  
+______________________________________  
 #### Variant Effect Predictor  
 
 Running the VCF file through the Varient Effect Predictor failed the first half-dozen tries.  Eventually, a result was achieved that identified six variants of interest on three SNPs: 
@@ -168,7 +168,7 @@ rs45549044
 
 Furthermore, not only only did VEP also identify rs45549044 as having moderate impact, it's PolyPhen score was 0.934, indicating that it is a probably damaging varient.  
 
-=======================================  
+______________________________________  
 #### rs45549044  
 ```
 GAATCTATAAAAGATGTTGAGCTTC[C/T]GTTATAGATTAGGACTGGATTGGAT  
@@ -182,13 +182,13 @@ HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.75
 ```
 
 
-=======================================  
+______________________________________  
 #### Autism Panel  
 
 
 ~[https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png](AutismPanel)  
 
-=======================================  
+______________________________________  
 #### References   
 https://www.cdc.gov/ncbddd/autism/data.html   
 https://github.com/vsbuffalo/bds-files   
