@@ -253,7 +253,7 @@ ______________________________________
 
 For the second run, we now have the the AutismPanel aligned, indexed, sorted, piledup, and analyzed.  
 
-![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-AutismPanel.png)  
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-PevsnerAutismFile.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-PevsnerAutismFile.png)  
 
 ______________________________________  
 #### WANNOVAR Analysis (Autism Screening Panel)   
@@ -273,8 +273,18 @@ ______________________________________
 
 Returning to the original hypothesis regarding observed CDC rates...
 
+
+Personally, I find the Diagnostic and Statistical Manual of Mental Disorders to have a lot of shoddy science in it, and consider psychiatry to be something of a pseudoscience.  Years from now, we'll look back at it and compare it to the study of Phylogeny.  Yet, Phylogeny did lead to the field of Cladistics.  Similarly, psychiatry and the DSM is helping us tease apart genetics and neurology.
+
+Having said that, after reviewing the genetics of Autism, here's my general opinion on the situation:  I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome, that was associated with a regulatory pathway
+
+
+
+
+
 ______________________________________  
 #### References   
+[DSM5 - Diagnostic Criteria - Autism Spectrum Disorder](https://www.autismspeaks.org/what-autism/diagnosis/dsm-5-diagnostic-criteria)  
 [Centers for Disease Control and Prevention: Autism Spectrum Disorder](https://www.cdc.gov/ncbddd/autism/data.html)     
 [The Supplementary Material Repository for Bioinformatics Data Skills](https://github.com/vsbuffalo/bds-files)   
 [High Throughput Sequencing Libraries](http://www.htslib.org/)  
@@ -283,8 +293,11 @@ ______________________________________
 [HUGO Gene Nomenclature Committee](http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12601)  
 [Burrows-Wheeler Alignment Tool](http://bio-bwa.sourceforge.net/bwa.shtml)    
 [Varient Effect Predictor Results - USH2A](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516)    
+[Varient Effect Predictor Results - Autism Panel](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Ticket?tl=pD6v05iE5wtpiykx)  
 [Micro-RNA Binding Site Polymorphisms in the WFS1 Gene Are Risk Factors of Diabetes Mellitus](http://eds.a.ebscohost.com.proxy.uchicago.edu/eds/detail/detail?sid=3c31a350-68d8-431a-a872-3ed327fa02ce%40sessionmgr4009&vid=0&hid=4211&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=26426397&db=mnh)  
 [Children with Usher syndrome: mental and behavioral disorders](http://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-8-16)  
-[An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)   [Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
+[An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)    
+[Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
  
+
 
