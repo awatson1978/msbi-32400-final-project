@@ -1,21 +1,9 @@
 Abigail Watson  
 MSBI 32400 – Final Project  
 
-______________________________________
-#### Project Setup    
-
-```bash
-mkdir msbi-32400-final-project  
-cd msbi-32400-final-project  
-mkdir bin  
-mkdir data
-mkdir doc   
-mkdir results
-mkdir src   
-```
 
 ______________________________________
-#### Assignment #1    
+## Assignment #1    
 
 Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ 
 
@@ -85,14 +73,11 @@ mv snpEff ../bin
 
 ______________________________________  
 #### Data Files        
-```bash
-# Download Autism BAM File  
-# http://www.bioinfbook.org/php/C9E3k  
-cd data  
-wget http://www.bioinfbook.org/wiley/3e/chapter9/WebDocument_9-7_mysample1.bam   
-mv ~/Downloads/WebDocument_9-7_mysample1.bam msbi-32400-final-project/data  
 
-# Download the complete hg19 1000 Genome Project in the 2bit format
+The following data files were used for this assignment.  
+
+```bash
+# Download the complete hg19 Human Genome in the 2bit format
 wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit  
 mv ~/Downloads/hg19.2bit msbi-32400-final-project/data  
 
@@ -100,17 +85,22 @@ mv ~/Downloads/hg19.2bit msbi-32400-final-project/data
 git clone https://github.com/vsbuffalo/bds-files  
 cp ~/Downloads/bds-files/chapter-11-alignment/NA12891_CEU_sample.bam msbi-32400-final-project/data
 
-# Alternatively, if we had the raw GRCh37 Illumina Data, we could extract the USH2A data with the following:   
-# samtools view -hb ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/pilot2_high_cov_GRCh37_bams/data/NA12891/alignment/NA12891.chrom1.ILLUMINA.bwa.CEU.high_coverage.20100517.bam 1:215622894-216423396 > NA12891_CEU_sample.bam
-
 # Get the Feb 2017 ClinVar VCF file  
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz.tbi
 mv ~/Downloads/clinvar.vcf.gz* msbi-32400-final-project/data 
+
+# Download Autism BAM File  
+# http://www.bioinfbook.org/php/C9E3k  
+cd data  
+wget http://www.bioinfbook.org/wiley/3e/chapter9/WebDocument_9-7_mysample1.bam   
+mv ~/Downloads/WebDocument_9-7_mysample1.bam msbi-32400-final-project/data  
 ```
 
 ______________________________________  
-#### Data Pipeline for   
+#### Data Preparaton  
+
+The following steps are necessary for all data pipelines (single gene, screening panel, personalized medicine).  
 
 ```bash
 # Convert the raw Human Genome data (hg19.2bit) into a .fa file  
@@ -120,7 +110,12 @@ cd msbi-32400-final-project
 # Index the hg19 Human Genome with SAMTools; this will produce our .fai file
 cd msbi-32400-final-project  
 bin/samtools/bin/samtools faidx data/hg19.fa  
+```     
 
+______________________________________  
+#### Initial Data Pipeline (Single Gene - USH2A)  
+
+```bash
 # Create our fastq file
 cd msbi-32400-final-project  
 bin/samtools/bin/samtools fastq data/NA12891_CEU_sample.bam > data/NA12891_CEU_sample.fastq
@@ -153,19 +148,19 @@ java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf.gz NA1289
 java -Xmx2G -jar ../bin/snpEff/SnpSift.jar extractFields -s ',' -e '.' NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.vcf CHROM POS REF ALT ID "ANN[*].ALLELE" "ANN[*].EFFECT" "ANN[*].IMPACT" "ANN[*].GENE" "ANN[*].FEATURE" "ANN[*].FEATUREID" "ANN[*].BIOTYPE" "ANN[*].RANK" "ANN[*].HGVS_C" "ANN[*].HGVS_P" CLNHGVS CLNALLE CLNACC CLNSIG CLNREVSTAT CLNDBN > NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.Extracted
 ```
 ______________________________________  
-#### Pipeline Results  
+#### Pipeline Results (Single Gene - USH2A)    
 
 Resulting files after the pipeline was completed:  
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes.png)   
 
 ______________________________________  
-#### ANNOVAR Analysis    
+#### ANNOVAR Analysis (Single Gene - USH2A)      
 
 After running the data analysis pipeline, we have have a VCF file that we can upload into ANNOVAR and VEP.  Annovar has consistently provided more reliable in my experience, so analysis begun there.  Of particular interest is that the exome summary results are narrowed down to only 9 single necleotide polymorphisms.  Furthermore, sorting by ExAC Frequency, and we see that 8 of the 9 SNPs are present in 13% or more of the population, with three of them being present in over half the human population.  However, one of them, rs45549044, is present in only 0.0043% of the population, which is very close the observed prevelance of 0.006% that the CDC recorded in the year 2000.  And while it's noted as being non-pathogenic, it is the only variant that warrents a COSMIC ID, which happens to be COSM1338810.
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-rs45549044.png)  
 ______________________________________  
-#### Variant Effect Predictor  
+#### Variant Effect Predictor (Single Gene - USH2A)    
 
 Running the VCF file through the Varient Effect Predictor failed the first half-dozen tries.  Eventually, a result was achieved that identified six variants of interest on three SNPs: 
 
@@ -181,7 +176,10 @@ Furthermore, not only only did VEP also identify rs45549044 as having moderate i
 
 
 ______________________________________  
-#### rs45549044  
+#### rs45549044 - USH2A  
+
+Using the example BAM from chapter 11 of the Vince Buffalo book, we confirm the VEP pipeline identifies genes and SNPs of interest.  In this case, we identify USH2A, which is located on Chromsome 1 at 1q41, encodes the protein Usherin, and which is involved in hearing and vision.   
+
 
 ```
 GAATCTATAAAAGATGTTGAGCTTC[C/T]GTTATAGATTAGGACTGGATTGGAT  
@@ -199,16 +197,58 @@ HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.75
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png)   
 
 ______________________________________  
+#### Cancer Risks    
+
+Interestingly, mutations on the rs45549044 SNP associated with ushering USH2A are [associated with carcinomas of the large intestine](http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=1338810).  Which means that people diagnosed with ASD may want to undergo the Autism Screening Panel to screen for colon cancer.  
+
+______________________________________  
 #### Autism Screening Panel  
 
 We use Pevsner's Austism Panel and the NCBI Ideogram drawer to visualize the 101 genome markers recommended for an Autism Screening Panel.  Such visualizations are important in personalized medicine endeavors, to allow clinicians and patients to navigate the genome and understand how a person's genetic profile compares to known biomarkers for clinical conditions. 
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png)    
 
-______________________________________  
-#### Cancer Risks    
 
-Interestingly, mutations on the rs45549044 SNP are [associated with carcinomas of the large intestine](http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=1338810).  Which means that people diagnosed with ASD may want to undergo the Autism Screening Panel to screen for colon cancer.  
+______________________________________  
+#### Revised Pipeline (Autism Screening Panel)  
+
+After running through this assignment, an article from Pychology Today entitled [Harvard Study Finds Genetic 'Toggle Switch' for Sociability](https://www.psychologytoday.com/blog/the-athletes-way/201703/harvard-study-finds-genetic-toggle-switch-sociability) ran across my Facebook feed; which detailed the role of UBE3A in downregulating a glutamate based synapse organizer called CBLN1.  I had just ran Pevsner's Autism Panel through the NCBI Ideogram tool; so I took a peek at the screening panel to see if UBE3A was in there.  Sure enough, there it was.  So then it occurred to me that maybe I should try running the entire Autism Panel against the the hg19 Human Genome.  Because that would be pretty cool.  
+
+But where to get the BAM file for the entire Autism Panel?  And that's when I remembered that I had used the NA12891_CEU_sample file from Chapter 11, but I hadn't used the WebDocument_9-7_mysample1.bam file.  
+
+```bash
+# Create our fastq file
+cd msbi-32400-final-project  
+bin/samtools/bin/samtools fastq data/WebDocument_9-7_mysample1.bam > data/WebDocument_9-7_mysample1.fastq
+
+# Use the Burrows-Wheeler Aligner to generate our SAM file
+cd msbi-32400-final-project  
+bin/bwa index -a bwtsw data/hg19.fa
+bin/bwa mem -R '@RG\tID:MSBI32400_Abigail_Watson_final_project\tSM:WebDocument_9-7_mysample1' data/hg19.fa data/WebDocument_9-7_mysample1.fastq > data/WebDocument_9-7_mysample1.sam  
+
+# view, sort, and index all the things
+bin/samtools/bin/samtools view -bt data/hg19.fai data/WebDocument_9-7_mysample1.sam > data/WebDocument_9-7_mysample1.bam
+bin/samtools/bin/samtools sort -o data/WebDocument_9-7_mysample1_sorted.bam data/WebDocument_9-7_mysample1.bam
+bin/samtools/bin/samtools index data/WebDocument_9-7_mysample1_sorted.bam
+bin/samtools/bin/samtools view -H data/WebDocument_9-7_mysample1_sorted.bam
+
+# Generate mpileup & run bcftools  
+bin/samtools/bin/samtools mpileup -uf data/hg19.fa data/WebDocument_9-7_mysample1_sorted.bam | bin/bcftools call -mv > data/WebDocument_9-7_mysample1_sorted_var.raw.vcf
+bin/bcftools filter -s LowQual -e "%QUAL<20" data/WebDocument_9-7_mysample1_sorted_var.raw.vcf > data/WebDocument_9-7_mysample1_sorted_var.flt.vcf
+
+# Count the lines
+more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'chr1' | wc -l     # 756  
+more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'PASS' | wc -l     # 686 - without the "PASS" in the header
+
+# Analyze with snpEff + Clinvar Feb 2017
+cd msbi-32400-final-project/data  
+java -Xmx4g -jar ../bin/snpEff/snpEff.jar eff -v -d -canon -noLog hg19 WebDocument_9-7_mysample1_sorted_var.flt.vcf > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.vcf
+
+java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf.gz WebDocument_9-7_mysample1_sorted_var.flt.snpEff.vcf > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.vcf
+
+java -Xmx2G -jar ../bin/snpEff/SnpSift.jar extractFields -s ',' -e '.' WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.vcf CHROM POS REF ALT ID "ANN[*].ALLELE" "ANN[*].EFFECT" "ANN[*].IMPACT" "ANN[*].GENE" "ANN[*].FEATURE" "ANN[*].FEATUREID" "ANN[*].BIOTYPE" "ANN[*].RANK" "ANN[*].HGVS_C" "ANN[*].HGVS_P" CLNHGVS CLNALLE CLNACC CLNSIG CLNREVSTAT CLNDBN > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.Extracted
+```
+
 
 ______________________________________  
 #### Discussion  
