@@ -1,0 +1,25 @@
+# The following table is formatted as tab separated values. 
+#GeneName	GeneId	TranscriptId	BioType	variants_impact_LOW	variants_impact_MODERATE	variants_impact_MODIFIER	variants_effect_3_prime_UTR_variant	variants_effect_downstream_gene_variant	variants_effect_intron_variant	variants_effect_missense_variant	variants_effect_splice_region_variant	variants_effect_synonymous_variant	variants_effect_upstream_gene_variant
+AARS	AARS	NM_001605.2		0	0	1	0	0	1	0	0	0	0
+C4orf51	C4orf51	NM_001080531.1		0	0	1	0	0	1	0	0	0	0
+CHFR	CHFR	NM_001161344.1		0	0	1	0	0	1	0	0	0	0
+CSMD3	CSMD3	NM_198123.1		0	0	1	0	0	1	0	0	0	0
+DNAH3	DNAH3	NM_017539.2		0	0	1	0	0	1	0	0	0	0
+DOCK3	DOCK3	NM_004947.4		0	0	1	0	0	1	0	0	0	0
+EPHA6	EPHA6	NM_001080448.2		0	0	1	0	0	1	0	0	0	0
+GALNT11	GALNT11	NM_022087.3		0	0	1	0	0	1	0	0	0	0
+GPC5	GPC5	NM_004466.5		0	0	1	0	0	1	0	0	0	0
+GRIA4	GRIA4	NM_000829.3		0	0	1	0	0	1	0	0	0	0
+GRM7	GRM7	NM_181874.2		0	0	1	0	0	1	0	0	0	0
+INPP4B	INPP4B	NM_001101669.1		0	0	1	0	0	1	0	0	0	0
+KCTD3	KCTD3	NM_016121.4		1	0	13	0	4	9	0	0	1	0
+LINC01399	LINC01399	NR_126356.1		0	0	1	0	0	1	0	0	0	0
+LOC102723833	LOC102723833	NR_125992.1		0	0	17	0	3	12	0	0	0	2
+MYRIP	MYRIP	NM_001284423.1		0	0	1	0	0	1	0	0	0	0
+NKAIN1	NKAIN1	NM_024522.2		0	0	1	0	0	1	0	0	0	0
+SNAR-B1	SNAR-B1	NR_024231.1		0	0	1	0	0	0	0	0	0	1
+SNAR-B1	SNAR-B1.2	NR_024231.1.2		0	0	1	0	1	0	0	0	0	0
+SNAR-B2	SNAR-B2	NR_024230.1		0	0	1	0	0	0	0	0	0	1
+SNAR-B2	SNAR-B2.2	NR_024230.1.2		0	0	1	0	1	0	0	0	0	0
+SNAR-D	SNAR-D	NR_024243.1		0	0	1	0	1	0	0	0	0	0
+USH2A	USH2A	NM_206933.2		4	5	696	1	4	692	5	1	3	0

@@ -8,7 +8,7 @@ mkdir /data/lab3
 # Set up project directories
 cd lab6
 mkdir bin  
-mkdir data 
+mkdir data
 mkdir doc   
 mkdir results
 mkdir src   
@@ -16,7 +16,6 @@ mkdir src
 # Download Autism Gene Panel  
 # http://www.bioinfbook.org/php/C9E3k  
 wget http://www.bioinfbook.org/wiley/3e/chapter9/WebDocument_9-05_101AutismPanel.bed.txt  
-
 
 # Download Autism BAM File  
 # http://www.bioinfbook.org/php/C9E3k  
@@ -45,7 +44,7 @@ export PATH=~/bin:$PATH
 bedtools sort -i 101AutismGenelistExons.bed > 101AutismGenelistExons_sort.bed    
 bedtools merge -c 4 -o collapse -i 101AutismGenelistExons_sort.bed > 101AutismGenelistExons_sort_merged.bed  
 
-# Load merged BED in IGV 
+# Load merged BED in IGV
 
 cp /data/bds-files/chapter-11-alignment/NA12891_CEU_sample.vcf.gz lab3/data  
 zcat lab3/data/NA12891_CEU_sample.vcf.gz | more  

@@ -1,0 +1,9 @@
+*.bam
+*.sam
+*.2bit
+*.fa
+*.bwt
+*.sa
+*.pac
+*.fastq
+clinvar*  
