@@ -170,6 +170,7 @@ Furthermore, not only only did VEP also identify rs45549044 as having moderate i
 
 ______________________________________  
 #### rs45549044  
+
 ```
 GAATCTATAAAAGATGTTGAGCTTC[C/T]GTTATAGATTAGGACTGGATTGGAT  
 Chromosome: 1:215671031  
@@ -183,10 +184,21 @@ HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.75
 
 
 ______________________________________  
-#### Autism Panel  
+#### Autism Screening Panel  
 
+We use Pevsner's Austism Panel and the NCBI Ideogram drawer to visualize the 101 genome markers recommended for an Autism Screening Panel.  Such visualizations are important in personalized medicine endeavors, to allow clinicians and patients to navigate the genome and understand how a person's genetic profile compares to known biomarkers for clinical conditions. 
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png)    
+
+______________________________________  
+#### Cancer Risks    
+
+Interestingly, mutations on the rs45549044 SNP are [associated with carcinomas of the large intestine](http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=1338810).  Which means that people diagnosed with ASD may want to undergo the Autism Screening Panel to screen for colon cancer.  
+
+______________________________________  
+#### Discussion  
+
+Returning to the original hypothesis regarding observed CDC rates...
 
 ______________________________________  
 #### References   
@@ -195,6 +207,7 @@ https://github.com/vsbuffalo/bds-files
 http://www.htslib.org/  
 http://hgdownload.cse.ucsc.edu/downloads.html  
 http://hgdownload.soe.ucsc.edu/admin/exe/  
+https://github.com/eweitz/ideogram  
 
 #### Other Research   
 https://wikis.utexas.edu/display/bioiteam/Variant+calling+using+SAMtools  
