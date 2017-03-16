@@ -260,6 +260,7 @@ ______________________________________
 
 Once again, the WANNOVAR tool seems to have a better auto-configuration, and does a better job with returning usable results with minimal trial-and-error.  It succesfully returned thousands of results from the Pevsner Autism File, enough that I was able to specify a threshold of 0.0147 corresponding to the CDC's observed prevelance of Autism, and drill down to multiple results for the UBE3A gene.  This confirms that the VCF file is correctly parsed, that we're analyzing the complete 101 gene autism screening panel, and we're correctly reporting the ExAC frequency numbers.
 
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png)  
 
 ______________________________________  
 #### Variant Effect Predictor (Autism Screening Panel)     
@@ -274,18 +275,16 @@ Returning to the original hypothesis regarding observed CDC rates...
 
 ______________________________________  
 #### References   
-https://www.cdc.gov/ncbddd/autism/data.html   
-https://github.com/vsbuffalo/bds-files   
-http://www.htslib.org/  
-http://hgdownload.cse.ucsc.edu/downloads.html  
-http://hgdownload.soe.ucsc.edu/admin/exe/  
-https://github.com/eweitz/ideogram  
-http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12601 
-https://wikis.utexas.edu/display/bioiteam/Variant+calling+using+SAMtools  
-http://bio-bwa.sourceforge.net/bwa.shtml  
-https://www.ebi.ac.uk/sites/ebi.ac.uk/files/content.ebi.ac.uk/materials/2014/140217_AgriOmics/dan_bolser_snp_calling.pdf  
-http://grch37.ensembl.org/Homo_sapiens/Transcript/Summary?db=core;g=ENSG00000042781;r=1:215796236-216596738;t=ENST00000307340;tl=nnArmLFBLwGQbZB7-2936516  
-http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516  
-
+[Centers for Disease Control and Prevention: Autism Spectrum Disorder](https://www.cdc.gov/ncbddd/autism/data.html)     
+[The Supplementary Material Repository for Bioinformatics Data Skills](https://github.com/vsbuffalo/bds-files)   
+[High Throughput Sequencing Libraries](http://www.htslib.org/)  
+[UCSC Genome Bioinformatics: Sequnce and Annotation Downloads](http://hgdownload.cse.ucsc.edu/downloads.html)    
+[Chromosome Visualization with D3.js](https://github.com/eweitz/ideogram)    
+[HUGO Gene Nomenclature Committee](http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12601)  
+[Burrows-Wheeler Alignment Tool](http://bio-bwa.sourceforge.net/bwa.shtml)    
+[Varient Effect Predictor Results - USH2A](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516)    
 [Micro-RNA Binding Site Polymorphisms in the WFS1 Gene Are Risk Factors of Diabetes Mellitus](http://eds.a.ebscohost.com.proxy.uchicago.edu/eds/detail/detail?sid=3c31a350-68d8-431a-a872-3ed327fa02ce%40sessionmgr4009&vid=0&hid=4211&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=26426397&db=mnh)  
+[Children with Usher syndrome: mental and behavioral disorders](http://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-8-16)  
+[An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)   [Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
+ 
 
