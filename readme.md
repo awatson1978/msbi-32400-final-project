@@ -237,8 +237,8 @@ bin/samtools/bin/samtools mpileup -uf data/hg19.fa data/WebDocument_9-7_mysample
 bin/bcftools filter -s LowQual -e "%QUAL<20" data/WebDocument_9-7_mysample1_sorted_var.raw.vcf > data/WebDocument_9-7_mysample1_sorted_var.flt.vcf
 
 # Count the lines
-more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'chr1' | wc -l     # 756  
-more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'PASS' | wc -l     # 686 - without the "PASS" in the header
+more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'chr1' | wc -l     # 11179 !
+more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'PASS' | wc -l     # 14525 !
 
 # Analyze with snpEff + Clinvar Feb 2017
 cd msbi-32400-final-project/data  
