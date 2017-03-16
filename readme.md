@@ -10,7 +10,7 @@ Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.o
 ______________________________________
 #### CDC Statistics on Autism Spectrum Disorder  
 
-To understand the genetic factors contributing to Autism Spectrum Disorder, we first begin looking at phenotype expression, which we can obtain from the Centers of Disease Control.  The difficulty in doing so is that the CDC reports that the prevalence of Autism has been increasing over the past few decades.  In the Surveillance Year 2000, it was reported that 1 in 150 children who were born in 1992 were diagnosed with autism (0.006%); whereas in 2012, the numbers had increased to 1 in 68 children who were born in 2004 were diagnosed with autism (0.0147%).  This presents a few hypotheses:
+To understand the genetic factors contributing to Autism Spectrum Disorder, we first begin looking at phenotype expression, which we can obtain from the Centers of Disease Control.  The difficulty in doing so is that the CDC reports that the prevalence of Autism has been increasing over the past few decades.  In the Surveillance Year 2000, it was reported that 1 in 150 children who were born in 1992 were diagnosed with autism (0.6%); whereas in 2012, the numbers had increased to 1 in 68 children who were born in 2004 were diagnosed with autism (1.47%).  This presents a few hypotheses:
 
 A.  Autism is increasing in the general population.   
   A1. Environmental factors such as pesticides and plastics are causing an increase in Autism.  
@@ -199,7 +199,7 @@ HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.75
 ______________________________________  
 #### Cancer Risks    
 
-Interestingly, mutations on the rs45549044 SNP associated with ushering USH2A are [associated with carcinomas of the large intestine](http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=1338810).  Which means that people diagnosed with ASD may want to undergo the Autism Screening Panel to screen for colon cancer.  
+Interestingly, mutations on the rs45549044 SNP associated with USH2A are [associated with carcinomas of the large intestine](http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=1338810).  Which means that people diagnosed with ASD may want to undergo the Autism Screening Panel to screen for colon cancer.  
 
 ______________________________________  
 #### Autism Screening Panel  
@@ -244,10 +244,27 @@ more data/WebDocument_9-7_mysample1_sorted_var.flt.vcf | grep 'PASS' | wc -l    
 cd msbi-32400-final-project/data  
 java -Xmx4g -jar ../bin/snpEff/snpEff.jar eff -v -d -canon -noLog hg19 WebDocument_9-7_mysample1_sorted_var.flt.vcf > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.vcf
 
-java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf.gz WebDocument_9-7_mysample1_sorted_var.flt.snpEff.vcf > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.vcf
+java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf WebDocument_9-7_mysample1_sorted_var.flt.snpEff.vcf > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.vcf
 
 java -Xmx2G -jar ../bin/snpEff/SnpSift.jar extractFields -s ',' -e '.' WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.vcf CHROM POS REF ALT ID "ANN[*].ALLELE" "ANN[*].EFFECT" "ANN[*].IMPACT" "ANN[*].GENE" "ANN[*].FEATURE" "ANN[*].FEATUREID" "ANN[*].BIOTYPE" "ANN[*].RANK" "ANN[*].HGVS_C" "ANN[*].HGVS_P" CLNHGVS CLNALLE CLNACC CLNSIG CLNREVSTAT CLNDBN > WebDocument_9-7_mysample1_sorted_var.flt.snpEff.clinvar.Extracted
 ```
+______________________________________  
+#### Pipeline Results (Autism Screening Panel)   
+
+For the second run, we now have the the AutismPanel aligned, indexed, sorted, piledup, and analyzed.  
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-AutismPanel.png)  
+
+______________________________________  
+#### WANNOVAR Analysis (Autism Screening Panel)   
+
+Once again, the WANNOVAR tool seems to have a better auto-configuration, and does a better job with returning usable results with minimal trial-and-error.  It succesfully returned thousands of results from the Pevsner Autism File, enough that I was able to specify a threshold of 0.0147 corresponding to the CDC's observed prevelance of Autism, and drill down to multiple results for the UBE3A gene.  This confirms that the VCF file is correctly parsed, that we're analyzing the complete 101 gene autism screening panel, and we're correctly reporting the ExAC frequency numbers.
+
+
+______________________________________  
+#### Variant Effect Predictor (Autism Screening Panel)     
+
+
 
 
 ______________________________________  
@@ -263,8 +280,12 @@ http://www.htslib.org/
 http://hgdownload.cse.ucsc.edu/downloads.html  
 http://hgdownload.soe.ucsc.edu/admin/exe/  
 https://github.com/eweitz/ideogram  
-
-#### Other Research   
+http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12601 
 https://wikis.utexas.edu/display/bioiteam/Variant+calling+using+SAMtools  
 http://bio-bwa.sourceforge.net/bwa.shtml  
 https://www.ebi.ac.uk/sites/ebi.ac.uk/files/content.ebi.ac.uk/materials/2014/140217_AgriOmics/dan_bolser_snp_calling.pdf  
+http://grch37.ensembl.org/Homo_sapiens/Transcript/Summary?db=core;g=ENSG00000042781;r=1:215796236-216596738;t=ENST00000307340;tl=nnArmLFBLwGQbZB7-2936516  
+http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516  
+
+[Micro-RNA Binding Site Polymorphisms in the WFS1 Gene Are Risk Factors of Diabetes Mellitus](http://eds.a.ebscohost.com.proxy.uchicago.edu/eds/detail/detail?sid=3c31a350-68d8-431a-a872-3ed327fa02ce%40sessionmgr4009&vid=0&hid=4211&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=26426397&db=mnh)  
+
