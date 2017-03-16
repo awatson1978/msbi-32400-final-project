@@ -110,7 +110,7 @@ mv ~/Downloads/clinvar.vcf.gz* msbi-32400-final-project/data
 ```
 
 ______________________________________  
-#### Data Pipeline / Protocol  
+#### Data Pipeline for   
 
 ```bash
 # Convert the raw Human Genome data (hg19.2bit) into a .fa file  
@@ -163,6 +163,7 @@ ______________________________________
 
 After running the data analysis pipeline, we have have a VCF file that we can upload into ANNOVAR and VEP.  Annovar has consistently provided more reliable in my experience, so analysis begun there.  Of particular interest is that the exome summary results are narrowed down to only 9 single necleotide polymorphisms.  Furthermore, sorting by ExAC Frequency, and we see that 8 of the 9 SNPs are present in 13% or more of the population, with three of them being present in over half the human population.  However, one of them, rs45549044, is present in only 0.0043% of the population, which is very close the observed prevelance of 0.006% that the CDC recorded in the year 2000.  And while it's noted as being non-pathogenic, it is the only variant that warrents a COSMIC ID, which happens to be COSM1338810.
 
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar.png)  
 ______________________________________  
 #### Variant Effect Predictor  
 
