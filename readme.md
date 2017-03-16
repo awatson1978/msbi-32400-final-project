@@ -110,7 +110,8 @@ mv ~/Downloads/clinvar.vcf.gz* msbi-32400-final-project/data
 ```
 
 ______________________________________  
-#### Data Pipeline / Protocol        
+#### Data Pipeline / Protocol  
+
 ```bash
 # Convert the raw Human Genome data (hg19.2bit) into a .fa file  
 cd msbi-32400-final-project
@@ -151,6 +152,11 @@ java -Xmx2G -jar ../bin/snpEff/SnpSift.jar annotate -noLog clinvar.vcf.gz NA1289
 
 java -Xmx2G -jar ../bin/snpEff/SnpSift.jar extractFields -s ',' -e '.' NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.vcf CHROM POS REF ALT ID "ANN[*].ALLELE" "ANN[*].EFFECT" "ANN[*].IMPACT" "ANN[*].GENE" "ANN[*].FEATURE" "ANN[*].FEATUREID" "ANN[*].BIOTYPE" "ANN[*].RANK" "ANN[*].HGVS_C" "ANN[*].HGVS_P" CLNHGVS CLNALLE CLNACC CLNSIG CLNREVSTAT CLNDBN > NA12891_CEU_sample_sorted_var.flt.snpEff.clinvar.Extracted
 ```
+______________________________________  
+#### Pipeline Results  
+
+Resulting files after the pipeline was completed:  
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes.png)   
 
 ______________________________________  
 #### ANNOVAR Analysis    
@@ -182,6 +188,9 @@ Global MAF:T=0.0022/11
 HGVS: NC_000001.10:g.215844373C>T, NC_000001.11:g.215671031C>T, NG_009497.1:g.757366G>A, NM_206933.2:c.14074G>A, NP_996816.2:p.Gly4692Arg  
 ```
 
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromsome1.png)  
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/rs45549044.png)   
 
 ______________________________________  
 #### Autism Screening Panel  
