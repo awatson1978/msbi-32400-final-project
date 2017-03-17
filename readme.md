@@ -333,7 +333,7 @@ ______________________________________
 [An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)  
 [Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)
 [Detailed investiation of the role of common and low-frequency WFS1 variants in type 2 diabetes risk](https://www.ncbi.nlm.nih.gov/pubmed/?term=20028947%5Buid%5D)  
-[Genetic variants and susceptibility to neurological complications following West Nile virus infection](Genetic variants and susceptibility to neurological complications following West Nile virus infection.)  
+[Genetic variants and susceptibility to neurological complications following West Nile virus infection](https://www.ncbi.nlm.nih.gov/pubmed/21881118)  
 [Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
 [Linkage of the gene for Wolfram syndrome to markers on the short arm of chromosome 4.](https://www.ncbi.nlm.nih.gov/pubmed/7987399)  
 [A gene encoding a transmembrane protein is mutated in patients with diabetes mellitus and optic atrophy (Wolfram syndrome).](https://www.ncbi.nlm.nih.gov/pubmed/9771706)  
