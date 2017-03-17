@@ -278,9 +278,9 @@ ______________________________________
 
 Most of the listed SNPs are benign; although rs1801208 has a high PolyPhen score, indicative of a known change in phenotypic expression.  
 
-AGCACCCATGCAGAGCCCTACACGC[A/G]CAGGGCCCTGGCCACCGAGGTCACC 
-Chromosome: 4:6301162 
-Gene:WFS1 (GeneView)  
+AGCACCCATGCAGAGCCCTACACGC[A/G]CAGGGCCCTGGCCACCGAGGTCACC   
+Chromosome: 4:6301162  
+Gene:WFS1 (GeneView)   
 Functional Consequence: missense  
 Clinical significance: Likely benign  
 Validated: by 1000G,by cluster,by frequency,by hapmap  
@@ -331,7 +331,7 @@ ______________________________________
 [Micro-RNA Binding Site Polymorphisms in the WFS1 Gene Are Risk Factors of Diabetes Mellitus](http://eds.a.ebscohost.com.proxy.uchicago.edu/eds/detail/detail?sid=3c31a350-68d8-431a-a872-3ed327fa02ce%40sessionmgr4009&vid=0&hid=4211&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=26426397&db=mnh)  
 [Children with Usher syndrome: mental and behavioral disorders](http://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-8-16)  
 [An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)  
-[Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)
+[Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
 [Detailed investiation of the role of common and low-frequency WFS1 variants in type 2 diabetes risk](https://www.ncbi.nlm.nih.gov/pubmed/?term=20028947%5Buid%5D)  
 [Genetic variants and susceptibility to neurological complications following West Nile virus infection](https://www.ncbi.nlm.nih.gov/pubmed/21881118)  
 [Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
