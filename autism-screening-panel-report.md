@@ -1,25 +1,6 @@
-Abigail Watson  
-MSBI 32400 – Final Project  
-
-
-______________________________________
-## Assignment   
-
-Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ 
-
-______________________________________
-#### CDC Statistics on Autism Spectrum Disorder  
-
-To understand the genetic factors contributing to Autism Spectrum Disorder, we first begin looking at phenotype expression, which we can obtain from the Centers of Disease Control.  The difficulty in doing so is that the CDC reports that the prevalence of Autism has been increasing over the past few decades.  In the Surveillance Year 2000, it was reported that 1 in 150 children who were born in 1992 were diagnosed with autism (0.6%); whereas in 2012, the numbers had increased to 1 in 68 children who were born in 2004 were diagnosed with autism (1.47%).  This presents a few hypotheses:
-
-A.  Autism is increasing in the general population.   
-  A1. Environmental factors such as pesticides and plastics are causing an increase in Autism.  
-  A2. Autism is a side effect of some other benefitial process, such as change in diet.  
-B.  The reporitng process is including more autisitc children.  
-  B1. The screening process for diagnosing autistic children is becoming better at detecting autism.
-  B2. The definition of autism has changed and become more general.
-
-We also note that parents who have a child with ASD have a 2%–18% chance of having a second child who is also affected, which suggests a recessive trait since it's a less than 1/4.  ASD tends to occur more often in people who have certain genetic or chromosomal conditions, indicating involvement in a gene network (to be expected for behavioral and psychiatric disorders).  Children born to older parents are at a higher risk for having ASD, indicating that ASD is a common symptom of mutations in the germ line.  ASD commonly co-occurs with other developmental, psychiatric, neurologic, chromosomal, and genetic diagnoses in 83% of the cases; again suggesting ASD is a common symptom of regulatory pathway disfunction.  
+Patient:  GRCh37/hg19  
+Autism Screening Panel  
+March 17th, 2017  
 
 ______________________________________  
 #### Autism Screening Panel  
