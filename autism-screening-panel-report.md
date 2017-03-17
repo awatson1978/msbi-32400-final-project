@@ -10,58 +10,6 @@ We use Pevsner's Austism Panel and the NCBI Ideogram drawer to visualize the 101
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/AutismPanel.png)    
 
 ______________________________________  
-#### Tool Installation      
-Note:  These instructions are for a Mac.  Please adjust use of wget/curl and compiled binaries accordingly.  
-
-```bash
-# Install the twoBitToFa utility  
-wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/twoBitToFa  
-mv ~/Downloads/twoBitToFa msbi-32400-final-project/bin   
-cd msbi-32400-final-project/bin      
-chmod +x twoBitToFa  
-
-
-# Download and install samtools
-wget https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2  
-mv ~/Downloads/samtools-1.3.1.tar.bz2  msbi-32400-final-project/src  
-cd msbi-32400-final-project/src  
-gunzip samtools-1.3.1.tar.bz2  
-tar -xzvf samtools-1.3.1.tar  
-cd samtools-1.3.1  
-make  
-make ../../bin/samtools install  
-
-
-# Download and install bcftools
-wget https://github.com/samtools/bcftools/releases/download/1.3.1/bcftools-1.3.1.tar.bz2  
-mv ~/Downloads/bcftools-1.3.1.tar.bz2  msbi-32400-final-project/src   
-cd msbi-32400-final-project/src  
-gunzip bcftools-1.3.1.tar.bz2  
-tar -xzvf bcftools-1.3.1.tar   
-cd bcftools-1.3.1  
-make  
-make ../../bin/bcftools install  
-
-
-# Install the Burrows-Wheeler Aligner tool  
-wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.15.tar.bz2  
-mv ~/Downloads/bwa-0.7.15.tar.bz2  msbi-32400-final-project/src  
-cd msbi-32400-final-project/src  
-gunzip bwa-0.7.15.tar.bz2  
-tar -xzvf bwa-0.7.15.tar.bz2  
-cd bwa-0.7.15  
-make  
-mv ./bwa ../../bin  
-
-# Download and install SnpEff  
-wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip  
-mv ~/Downloads/snpEff_latest_core.zip  msbi-32400-final-project/src    
-cd msbi-32400-final-project/src  
-unzip snpEff_latest_core.zip  
-mv snpEff ../bin 
-```
-
-______________________________________  
 #### Data Files        
 
 The following data files were used for this assignment.  
@@ -70,10 +18,6 @@ The following data files were used for this assignment.
 # Download the complete hg19 Human Genome in the 2bit format
 wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit  
 mv ~/Downloads/hg19.2bit msbi-32400-final-project/data  
-
-# Download and install gene USH2A from Vince Buffalo Chapter 11  
-git clone https://github.com/vsbuffalo/bds-files  
-cp ~/Downloads/bds-files/chapter-11-alignment/NA12891_CEU_sample.bam msbi-32400-final-project/data
 
 # Get the Feb 2017 ClinVar VCF file  
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
