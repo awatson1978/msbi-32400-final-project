@@ -291,26 +291,47 @@ HGVS: NC_000004.11:g.6302889G>A, NC_000004.12:g.6301162G>A, NG_011700.1:g.36313G
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromosome4-rs1801208.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromosome4-rs1801208.png)  
 
 
+______________________________________  
+#### Analysis      
+
+During analysis, we set the threshold of ExAC allele observations at the CDC's observed rate of prevelence of Autism.  The general thinking is that there are a large number of SNPs that we can rule out; because they're present in larger portions of the population than the disease under study.  Of the SNPs that have frequencies less than the prevelence of Autism, some of them are known to be autosomnal recessive; and to have mild forms when a person is a carrier, but not doubly recessive.  
 
 ______________________________________  
-#### Discussion  
+#### Clinical Diagnosis    
 
-Returning to the original hypothesis regarding observed CDC rates...
+In interpreting these results, we have to think about what the GRCh37/hg19 Genome Assembly represents.  Unlike the 1000 Genome Projects, which provides the possibility of _averaged_ data; the GRCh37 and GRCh38 assemblies represent a normalized reference genome.  That is, it was assmbled piecemeal from thirteen anonymous volunteers from Buffalo, New York.  As such, if the genome was evenly divided between the 13 people (in actuality, it wasn't), and there is a 1/68 chance of having autism, then would be a 19% chance of the reference genome having genes from somebody having autism.  
 
-I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome or Wolfram Syndrome, that was associated with the regulatory pathways that control the communication organs (speach, hearing, sight). 
+So, what these three genes from our Autism Screening Panel actually represent is this:  of the thirteen anonymous volunteers who contributed to the GRCh37 reference genome, they collectively had 3 of the 101 genes from Pevsner's Autism Screening Panel.  
 
-The general thinking is that there are a large number of SNPs that we can rule out; because they're present in larger portions of the population than the disease under study.  Of the SNPs that have frequencies less than the prevelence of Autism, some of them are known to be autosomnal recessive; and to have mild forms when a person is a carrier, but not doubly recessive.  
+______________________________________  
+#### Mechanism of Action        
+
+Broadly speaking, the genes identified by the screening panel are responsible for producing the proteins that form the sodium-calcium ion pumps in laminin and transmembrane glycoproteins don't function properly.  And laminin and transmembrane glycoproteins are involved in the development and maintenance of the occular lens, and management of diabetes.  
+
+______________________________________  
+#### Risk Scores      
+
+If we had been running a 23andMe genome through this pipeline, at this point we might calculate a risk score based on the percentage of people with those genes who are later diagnosed with autism.  Niavely, having variant markers on only 3/101 genes in the panel would indicate a 3% risk of having autism.  In reality, the gene effects are likely distributed on a logarithmic or power distribution; and the results would either be a smoking gun, or somewhere on a long tail.  
+
+Additionally, we might run the genomes from the 1000 Genome Project through the Autism Screening Panel, to determine the specificity and sensitivity of the screening panel.  
+
+______________________________________  
+#### Familial Heritability Risks  
+
+While it's unlikely that any of the thirteen anonymous volunteers involved in the GRCh37 assembly had autism themselves; it appears that they may be carrying a few recessive genes for autism.  If they had children with somebody else who had variants on LAMC3, WFS1, and SCN1A, their children may be at risk of having Ushers Syndrome, Wolfram Syndrom, Diabetes, and vision/hearing loss.  
+
+______________________________________  
+#### Discussion   
+
+Without running the 1000 Human Genome data through the screening panel; it's difficult to say whether autism rates are rising in the general population based on genetic evidence.  It does appears that the definition of Autism has changed over time.  Based on review of the literature and analysis of the data during this assignment, my theory is this:  
+
+At one point in time, Autism was a diagnostic description of a set of behaviors that was generally associated with a recessive trait, such as Usher's Syndrome or Wolfram Syndrome.  These syndromes involve breakdown of the regulatory pathways that control the communication organs (speach, hearing, sight), and are highly correlated with an underlying recessive gene.  Hence the historical prevelence rates that are correlated with recessive conditions such as Usher's Syndrome, which are known autosomal recessive syndromes.  
 
 Here's the thing though:  the definition of Autism has been shifting away from an underlying genetic determinant that's correlated with a regulatory pathway that controls communication and cognition.  Instead, it's shifting towards a metabolic or neurological mechanism that describes that regulatory pathway; and it's now including any genetic determinants that may cause a chance in that metabolic or neurological mechanism.
 
-Broadly speaking, the genes responsible for producing the proteins that form the sodium-calcium ion pumps in laminin and transmembrane glycoproteins don't function properly.  And laminin and transmembrane glycoproteins are involved in the development and maintenance of the occular lens, and management of diabetes.  
+Nowdays, Autism Spectrum Disorder is more of a discription of the failure of usherin, wolfarin, laminin, transmembrane glycoproteins, neurodevelopmental regulators, and other macromolecules to successfully assemble a functioning optic and auditory system that successfully interfaces with other humans according to socially constructed protocols.      
 
-Stepping back, we have to think about what the GRCh37/hg19 Genome Assembly represents.  Unlike the 1000 Genome Projects, which provides the possibility of _averaged_ data; the GRCh37 and GRCh38 assemblies represent a normalized reference genome.  That is, it was assmbled piecemeal from thirteen anonymous volunteers from Buffalo, New York.  As such, if the genome was evenly divided between the 13 people (in actuality, it wasn't), and there is a 1/68 chance of having autism, then there is a 19% chance of the reference genome having genes from somebody having autism.  
-
-So, what these three genes from our Autism Screening Panel represent is this:  of the thirteen anonymous volunteers who contributed to the GRCh37 reference genome, they collectively had 3 of the 101 genes from Pevsner's Autism Screening Panel.  
-
-
-
+However, the initial hypotheses are not mutually exclusive.  It's possible that the definition of Autism has changed over time AND it's prevelence is rising in the general population.  And while we have some data to make a tentative positive affirmation that the definition has changed, we simply don't have enough information to rule out rising rates in the general population.  For that, we would need to run the entire 1000 Human Genome dataset through the autism panel.  I would welcome the opportunity to do such work and further explore that problem.
 
 
 ______________________________________  
