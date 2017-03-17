@@ -261,7 +261,7 @@ For the second run, we now have the the AutismPanel aligned, indexed, sorted, pi
 ______________________________________  
 #### Variant Effect Predictor (Autism Screening Panel)     
 
-After numerous runs, the best result I could get had two dozen results, covering only 4 genes from the original list of 101 Autism Screening Panel.  
+After numerous runs, the best result I could get had two dozen results, covering only 3 genes from the original list of 101 Autism Screening Panel.  
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png)   
 
