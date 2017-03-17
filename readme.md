@@ -3,7 +3,7 @@ MSBI 32400 – Final Project
 
 
 ______________________________________
-## Assignment #1    
+## Assignment   
 
 Call variants on Pevsner autism bam (Web Document 9.7 at http://www.bioinfbook.org/php/ then annotate with snpEff + Clinvar and upload to VEP for ExAC population frequencies.  Compare variants in the 101 target gene list with ExAC frequencies expected autism frequencies.  Use hg19.fa (see below), not Pevsner's WebDocument_9-6_101autism.fa.  Use CDC 2016 frequencies: https://www.cdc.gov/ncbddd/autism/ 
 
@@ -16,6 +16,8 @@ A.  Autism is increasing in the general population.
   A1. Environmental factors such as pesticides and plastics are causing an increase in Autism.  
   A2. Autism is a side effect of some other benefitial process, such as change in diet.  
 B.  The reporitng process is including more autisitc children.  
+  B1. The screening process for diagnosing autistic children is becoming better at detecting autism.
+  B2. The definition of autism has changed and become more general.
 
 We also note that parents who have a child with ASD have a 2%–18% chance of having a second child who is also affected, which suggests a recessive trait since it's a less than 1/4.  ASD tends to occur more often in people who have certain genetic or chromosomal conditions, indicating involvement in a gene network (to be expected for behavioral and psychiatric disorders).  Children born to older parents are at a higher risk for having ASD, indicating that ASD is a common symptom of mutations in the germ line.  ASD commonly co-occurs with other developmental, psychiatric, neurologic, chromosomal, and genetic diagnoses in 83% of the cases; again suggesting ASD is a common symptom of regulatory pathway disfunction.  
 
@@ -255,6 +257,7 @@ For the second run, we now have the the AutismPanel aligned, indexed, sorted, pi
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-PevsnerAutismFile.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/DataFileSizes-PevsnerAutismFile.png)  
 
+
 ______________________________________  
 #### WANNOVAR Analysis (Autism Screening Panel)   
 
@@ -262,8 +265,20 @@ Once again, the WANNOVAR tool seems to have a better auto-configuration, and doe
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png)  
 
+
+
 ______________________________________  
 #### Variant Effect Predictor (Autism Screening Panel)     
+
+After numerous runs, the best result I could get had 23 results, covering only 4 genes from the original list of 101 Autism Screening Panel.  These genes were LAMC3, WFS1, SCN1A, and LAMC3.  
+
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png)   
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png)  
+
+
+
 
 
 
@@ -276,7 +291,11 @@ Returning to the original hypothesis regarding observed CDC rates...
 
 Personally, I find the Diagnostic and Statistical Manual of Mental Disorders to have a lot of shoddy science in it, and consider psychiatry to be something of a pseudoscience.  Years from now, we'll look back at it and compare it to the study of Phylogeny.  Yet, Phylogeny did lead to the field of Cladistics.  Similarly, psychiatry and the DSM is helping us tease apart genetics and neurology.
 
-Having said that, after reviewing the genetics of Autism, here's my general opinion on the situation:  I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome, that was associated with a regulatory pathway
+Having said that, after reviewing the genetics of Autism, here's my general opinion on the situation:  I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome, that was associated with the regulatory pathways that control the communication organs (speach, hearing, sight).  The general thinking is that there are a large number of SNPs that we can rule out; because they're present in larger portions of the population than the disease under study.  Of the SNPs that have frequencies less than the prevelence of Autism, some of them are known to be autosomnal recessive; and to have mild forms when a person is a carrier, but not doubly recessive.  
+
+Here's the thing though:  the definition of Autism has been shifting away from an underlying genetic determinant that's correlated with a regulatory pathway that controls communication and cognition.  Instead, it's shifting towards a metabolic or neurological mechanism that describes that regulatory pathway; and it's now including any genetic determinants that may cause a chance in that metabolic or neurological mechanism.
+
+
 
 
 
@@ -299,5 +318,9 @@ ______________________________________
 [An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)    
 [Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
  
+[Detailed investiation of the role of common and low-frequency WFS1 variants in type 2 diabetes risk](https://www.ncbi.nlm.nih.gov/pubmed/?term=20028947%5Buid%5D)  
+
+[Genetic variants and susceptibility to neurological complications following West Nile virus infection](Genetic variants and susceptibility to neurological complications following West Nile virus infection.)  
+
 
 
