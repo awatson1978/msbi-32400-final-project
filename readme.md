@@ -259,36 +259,36 @@ For the second run, we now have the the AutismPanel aligned, indexed, sorted, pi
 
 
 ______________________________________  
-#### WANNOVAR Analysis (Autism Screening Panel)   
-
-Once again, the WANNOVAR tool seems to have a better auto-configuration, and does a better job with returning usable results with minimal trial-and-error.  It succesfully returned thousands of results from the Pevsner Autism File, enough that I was able to specify a threshold of 0.0147 corresponding to the CDC's observed prevelance of Autism, and drill down to multiple results for the UBE3A gene.  This confirms that the VCF file is correctly parsed, that we're analyzing the complete 101 gene autism screening panel, and we're correctly reporting the ExAC frequency numbers.
-
-![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/wannovar-PevsnerAutismFile-filtered.png)  
-
-
-
-______________________________________  
 #### Variant Effect Predictor (Autism Screening Panel)     
 
-After numerous runs, the best result I could get had two dozen results, covering only 4 genes from the original list of 101 Autism Screening Panel.  These genes were LAMC3, WFS1, and SCN1A.  
-
-- wolframin ER transmembrane glycoprotein  
-- laminin subunit gamma 3  
-- sodium voltage-gated channel alpha subunit 1  
-
+After numerous runs, the best result I could get had two dozen results, covering only 4 genes from the original list of 101 Autism Screening Panel.  
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png)   
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png)  
 
-A PubMed search of the relevant genes names found the following articles:
+These genes were LAMC3, WFS1, and SCN1A, which are associated with the following proteins and macromolecules:    
 
-[Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
-[Linkage of the gene for Wolfram syndrome to markers on the short arm of chromosome 4.](https://www.ncbi.nlm.nih.gov/pubmed/7987399)  
-[A gene encoding a transmembrane protein is mutated in patients with diabetes mellitus and optic atrophy (Wolfram syndrome).](https://www.ncbi.nlm.nih.gov/pubmed/9771706)  
-[Localization of a putative human brain sodium channel gene (SCN1A) to chromosome band 2q24.](https://www.ncbi.nlm.nih.gov/pubmed/8062593)  
-[Autosomal dominant epilepsy with febrile seizures plus with missense mutations of the (Na+)-channel alpha 1 subunit gene, SCN1A.](https://www.ncbi.nlm.nih.gov/pubmed/11823106)  
-[International Union of Pharmacology. XLVII. Nomenclature and structure-function relationships of voltage-gated sodium channels.](https://www.ncbi.nlm.nih.gov/pubmed/16382098)  
+- [WFS1 - wolframin ER transmembrane glycoprotein](https://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=7466) 
+- [LAMC3 - laminin subunit gamma 3](https://www.ncbi.nlm.nih.gov/gene/10319)    
+- [SCN1A - sodium voltage-gated channel alpha subunit 1](https://www.ncbi.nlm.nih.gov/gene/6323)    
+
+______________________________________  
+#### rs1801208 - WFS1  
+
+Most of the listed SNPs are benign; although rs1801208 has a high PolyPhen score, indicative of a known change in phenotypic expression.  
+
+AGCACCCATGCAGAGCCCTACACGC[A/G]CAGGGCCCTGGCCACCGAGGTCACC 
+Chromosome: 4:6301162 
+Gene:WFS1 (GeneView)  
+Functional Consequence: missense  
+Clinical significance: Likely benign  
+Validated: by 1000G,by cluster,by frequency,by hapmap  
+Global MAF:A=0.0603/302   
+HGVS: NC_000004.11:g.6302889G>A, NC_000004.12:g.6301162G>A, NG_011700.1:g.36313G>A, NM_001145853.1:c.1367G>A, NM_006005.2:c.1367G>A, NM_006005.3:c.1367G>A, NP_001139325.1:p.Arg456His, NP_005996.1:p.Arg456His, NP_005996.2:p.Arg456His, XM_017008586.1:c.1376G>A, XP_016864075.1:p.Arg459His  
+
+
+![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromosome4-rs1801208.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/chromosome4-rs1801208.png)  
 
 
 
@@ -297,14 +297,17 @@ ______________________________________
 
 Returning to the original hypothesis regarding observed CDC rates...
 
+I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome or Wolfram Syndrome, that was associated with the regulatory pathways that control the communication organs (speach, hearing, sight). 
 
-Personally, I find the Diagnostic and Statistical Manual of Mental Disorders to have a lot of shoddy science in it, and consider psychiatry to be something of a pseudoscience.  Years from now, we'll look back at it and compare it to the study of Phylogeny.  Yet, Phylogeny did lead to the field of Cladistics.  Similarly, psychiatry and the DSM is helping us tease apart genetics and neurology.
-
-Having said that, after reviewing the genetics of Autism, here's my general opinion on the situation:  I think the definition of Autism has changed over time.  At one point in time, it was a diagnostic description of a set of behaviors that may have been generally associated with a recessive trait, such as Usher's Syndrome, that was associated with the regulatory pathways that control the communication organs (speach, hearing, sight).  The general thinking is that there are a large number of SNPs that we can rule out; because they're present in larger portions of the population than the disease under study.  Of the SNPs that have frequencies less than the prevelence of Autism, some of them are known to be autosomnal recessive; and to have mild forms when a person is a carrier, but not doubly recessive.  
+The general thinking is that there are a large number of SNPs that we can rule out; because they're present in larger portions of the population than the disease under study.  Of the SNPs that have frequencies less than the prevelence of Autism, some of them are known to be autosomnal recessive; and to have mild forms when a person is a carrier, but not doubly recessive.  
 
 Here's the thing though:  the definition of Autism has been shifting away from an underlying genetic determinant that's correlated with a regulatory pathway that controls communication and cognition.  Instead, it's shifting towards a metabolic or neurological mechanism that describes that regulatory pathway; and it's now including any genetic determinants that may cause a chance in that metabolic or neurological mechanism.
 
+Broadly speaking, the genes responsible for producing the proteins that form the sodium-calcium ion pumps in laminin and transmembrane glycoproteins don't function properly.  And laminin and transmembrane glycoproteins are involved in the development and maintenance of the occular lens, and management of diabetes.  
 
+Stepping back, we have to think about what the GRCh37/hg19 Genome Assembly represents.  Unlike the 1000 Genome Projects, which provides the possibility of _averaged_ data; the GRCh37 and GRCh38 assemblies represent a normalized reference genome.  That is, it was assmbled piecemeal from thirteen anonymous volunteers from Buffalo, New York.  As such, if the genome was evenly divided between the 13 people (in actuality, it wasn't), and there is a 1/68 chance of having autism, then there is a 19% chance of the reference genome having genes from somebody having autism.  
+
+So, what these three genes from our Autism Screening Panel represent is this:  of the thirteen anonymous volunteers who contributed to the GRCh37 reference genome, they collectively had 3 of the 101 genes from Pevsner's Autism Screening Panel.  
 
 
 
@@ -312,29 +315,25 @@ Here's the thing though:  the definition of Autism has been shifting away from a
 
 ______________________________________  
 #### References   
+[Human Genome Browser - hg19 assembly](https://genome.ucsc.edu/cgi-bin/hgGateway?db=hg19)  
+[National Center for Biotechnology Information - GRCh37](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.13/)  
 [DSM5 - Diagnostic Criteria - Autism Spectrum Disorder](https://www.autismspeaks.org/what-autism/diagnosis/dsm-5-diagnostic-criteria)  
 [Centers for Disease Control and Prevention: Autism Spectrum Disorder](https://www.cdc.gov/ncbddd/autism/data.html)     
 [The Supplementary Material Repository for Bioinformatics Data Skills](https://github.com/vsbuffalo/bds-files)   
 [High Throughput Sequencing Libraries](http://www.htslib.org/)  
+[1000 Genomes Browser](https://www.ncbi.nlm.nih.gov/variation/tools/1000genomes/)  
 [UCSC Genome Bioinformatics: Sequnce and Annotation Downloads](http://hgdownload.cse.ucsc.edu/downloads.html)    
 [Chromosome Visualization with D3.js](https://github.com/eweitz/ideogram)    
 [HUGO Gene Nomenclature Committee](http://www.genenames.org/)  
 [Burrows-Wheeler Alignment Tool](http://bio-bwa.sourceforge.net/bwa.shtml)    
-[Varient Effect Predictor Results - USH2A](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516)    
+[Varient Effect Predictor Results - USH2A](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516)
 [Varient Effect Predictor Results - Autism Panel](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Ticket?tl=pD6v05iE5wtpiykx)  
 [Micro-RNA Binding Site Polymorphisms in the WFS1 Gene Are Risk Factors of Diabetes Mellitus](http://eds.a.ebscohost.com.proxy.uchicago.edu/eds/detail/detail?sid=3c31a350-68d8-431a-a872-3ed327fa02ce%40sessionmgr4009&vid=0&hid=4211&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=26426397&db=mnh)  
 [Children with Usher syndrome: mental and behavioral disorders](http://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-8-16)  
-[An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)    
-[Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)  
- 
+[An eQTL mapping approach reveals that rare variants in the SEMA5A regulatory network impact autism risk](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690972/)  
+[Mutations in both gene copies more common in autism](https://spectrumnews.org/news/mutations-in-both-gene-copies-more-common-in-autism/)
 [Detailed investiation of the role of common and low-frequency WFS1 variants in type 2 diabetes risk](https://www.ncbi.nlm.nih.gov/pubmed/?term=20028947%5Buid%5D)  
-
 [Genetic variants and susceptibility to neurological complications following West Nile virus infection](Genetic variants and susceptibility to neurological complications following West Nile virus infection.)  
-
-
-
-
-
 [Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
 [Linkage of the gene for Wolfram syndrome to markers on the short arm of chromosome 4.](https://www.ncbi.nlm.nih.gov/pubmed/7987399)  
 [A gene encoding a transmembrane protein is mutated in patients with diabetes mellitus and optic atrophy (Wolfram syndrome).](https://www.ncbi.nlm.nih.gov/pubmed/9771706)  
