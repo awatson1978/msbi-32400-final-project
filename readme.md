@@ -270,16 +270,25 @@ Once again, the WANNOVAR tool seems to have a better auto-configuration, and doe
 ______________________________________  
 #### Variant Effect Predictor (Autism Screening Panel)     
 
-After numerous runs, the best result I could get had 23 results, covering only 4 genes from the original list of 101 Autism Screening Panel.  These genes were LAMC3, WFS1, SCN1A, and LAMC3.  
+After numerous runs, the best result I could get had two dozen results, covering only 4 genes from the original list of 101 Autism Screening Panel.  These genes were LAMC3, WFS1, and SCN1A.  
+
+- wolframin ER transmembrane glycoprotein  
+- laminin subunit gamma 3  
+- sodium voltage-gated channel alpha subunit 1  
 
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-graphs-pevsner.png)   
 
 ![https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png](https://raw.githubusercontent.com/awatson1978/msbi-32400-final-project/master/screenshots/vep-stats-pevsner.png)  
 
+A PubMed search of the relevant genes names found the following articles:
 
-
-
+[Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
+[Linkage of the gene for Wolfram syndrome to markers on the short arm of chromosome 4.](https://www.ncbi.nlm.nih.gov/pubmed/7987399)  
+[A gene encoding a transmembrane protein is mutated in patients with diabetes mellitus and optic atrophy (Wolfram syndrome).](https://www.ncbi.nlm.nih.gov/pubmed/9771706)  
+[Localization of a putative human brain sodium channel gene (SCN1A) to chromosome band 2q24.](https://www.ncbi.nlm.nih.gov/pubmed/8062593)  
+[Autosomal dominant epilepsy with febrile seizures plus with missense mutations of the (Na+)-channel alpha 1 subunit gene, SCN1A.](https://www.ncbi.nlm.nih.gov/pubmed/11823106)  
+[International Union of Pharmacology. XLVII. Nomenclature and structure-function relationships of voltage-gated sodium channels.](https://www.ncbi.nlm.nih.gov/pubmed/16382098)  
 
 
 
@@ -309,7 +318,7 @@ ______________________________________
 [High Throughput Sequencing Libraries](http://www.htslib.org/)  
 [UCSC Genome Bioinformatics: Sequnce and Annotation Downloads](http://hgdownload.cse.ucsc.edu/downloads.html)    
 [Chromosome Visualization with D3.js](https://github.com/eweitz/ideogram)    
-[HUGO Gene Nomenclature Committee](http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12601)  
+[HUGO Gene Nomenclature Committee](http://www.genenames.org/)  
 [Burrows-Wheeler Alignment Tool](http://bio-bwa.sourceforge.net/bwa.shtml)    
 [Varient Effect Predictor Results - USH2A](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?db=core;tl=nnArmLFBLwGQbZB7-2936516)    
 [Varient Effect Predictor Results - Autism Panel](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Ticket?tl=pD6v05iE5wtpiykx)  
@@ -324,3 +333,11 @@ ______________________________________
 
 
 
+
+
+[Characterization and expression of the laminin gamma3 chain: a novel, non-basement membrane-associated, laminin chain.](https://www.ncbi.nlm.nih.gov/pubmed/10225960)  
+[Linkage of the gene for Wolfram syndrome to markers on the short arm of chromosome 4.](https://www.ncbi.nlm.nih.gov/pubmed/7987399)  
+[A gene encoding a transmembrane protein is mutated in patients with diabetes mellitus and optic atrophy (Wolfram syndrome).](https://www.ncbi.nlm.nih.gov/pubmed/9771706)  
+[Localization of a putative human brain sodium channel gene (SCN1A) to chromosome band 2q24.](https://www.ncbi.nlm.nih.gov/pubmed/8062593)  
+[Autosomal dominant epilepsy with febrile seizures plus with missense mutations of the (Na+)-channel alpha 1 subunit gene, SCN1A.](https://www.ncbi.nlm.nih.gov/pubmed/11823106)  
+[International Union of Pharmacology. XLVII. Nomenclature and structure-function relationships of voltage-gated sodium channels.](https://www.ncbi.nlm.nih.gov/pubmed/16382098)  
