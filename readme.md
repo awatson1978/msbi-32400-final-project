@@ -15,9 +15,9 @@ To understand the genetic factors contributing to Autism Spectrum Disorder, we f
 A.  Autism is increasing in the general population.   
   A1. Environmental factors such as pesticides and plastics are causing an increase in Autism.  
   A2. Autism is a side effect of some other benefitial process, such as change in diet.  
-B.  The reportng process is including more autisitc children.  
-  B1. The screening process for diagnosing autistic children is becoming better at detecting autism.
-  B2. The definition of autism has changed and become more general.
+B.  The reportng process is including more autisitc children.   
+  B1. The screening process for diagnosing autistic children is becoming better at detecting autism.  
+  B2. The definition of autism has changed and become more general.  
 
 We also note that parents who have a child with ASD have a 2%–18% chance of having a second child who is also affected, which suggests a recessive trait since it's a less than 1/4.  ASD tends to occur more often in people who have certain genetic or chromosomal conditions, indicating involvement in a gene network (to be expected for behavioral and psychiatric disorders).  Children born to older parents are at a higher risk for having ASD, indicating that ASD is a common symptom of mutations in the germ line.  ASD commonly co-occurs with other developmental, psychiatric, neurologic, chromosomal, and genetic diagnoses in 83% of the cases; again suggesting ASD is a common symptom of regulatory pathway disfunction.  
 
