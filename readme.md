@@ -15,7 +15,7 @@ To understand the genetic factors contributing to Autism Spectrum Disorder, we f
 A.  Autism is increasing in the general population.   
   A1. Environmental factors such as pesticides and plastics are causing an increase in Autism.  
   A2. Autism is a side effect of some other benefitial process, such as change in diet.  
-B.  The reporitng process is including more autisitc children.  
+B.  The reportng process is including more autisitc children.  
   B1. The screening process for diagnosing autistic children is becoming better at detecting autism.
   B2. The definition of autism has changed and become more general.
 
